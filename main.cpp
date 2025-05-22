@@ -84,7 +84,7 @@ int dream()
 	ID2D1Device1* d2_device = 0;
 	if (FAILED(d2_factory->CreateDevice(dxgi_device, &d2_device))) return 6;
 
-	if (FAILED(d2_device->CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS_ENABLE_MULTITHREADED_OPTIMIZATIONS, &dev_context))) return 7;
+	if (FAILED(d2_device->CreateDeviceContext(D2D1_DEVICE_CONTEXT_OPTIONS_NONE, &dev_context))) return 7;
 
 	IDXGISurface2* surface = 0;
 	if (FAILED(swap_chain->GetBuffer(0, __uuidof(IDXGISurface2), (void**)&surface))) return 8;
